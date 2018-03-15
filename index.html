@@ -7,10 +7,23 @@
 		<title>reveal.js</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
-
+		<!-- <link rel="stylesheet" href="css/theme/black.css"> -->
+		<link rel="stylesheet" href="css/theme/solarized.css">
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- classes for the mermaid svgs -->
+		<style>
+	    .mermaidOg > rect{
+	        fill:#FF0000;
+	        stroke:#FFFF00;
+	        stroke-width:4px;
+					font-size: 8px;
+	    }
+			.mermaidOg > node > div {
+				font-size: 75% !important;
+			}
+		</style>
 
 		<!-- Printing and PDF exports -->
 		<script>
@@ -24,8 +37,55 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section>
+					<h1>Theory and Politics Review</h1>
+					<h3>Feminist Disability Studies 545</h3>
+					<p>
+						<small>Created by <a href="http://amygroshek.com">Instructor Amy Groshek</a> on March 15, 2018</small>
+					</p>
+				</section>
+				<section>
+					<h2>Theoretical Landscape</h2>
+					<div class="mermaid">
+				  graph LR
+				      B(Gilbert & Gubar<br>''madness'' as revolt)-->C(Donaldson<br>resist madness as metaphor);
+							C-->A[DISABILITY];
+							D(Price<br>New term:<br>''Mental Disability'')-->A;
+							E(Price<br>New concept:<br>''bodymind'')-->A;
+							F(Minich<br>New methodology:<br>Stop looking for resistance)-->G;
+							G(Kim<br>Enhance & contextualize<br>Minich's methodology)-->H;
+							G-->J[crip and queer of color critiques];
+							H(Puar<br>Geopolitcal production<br>of disabled bodies)-->A;
+							class A,B,C mermaidOg;
+							H-->J;
+							J-->A;
+				  </div>
+				</section>
+				<section>
+					<h2>Gilbert & Gubar</h2>
+					<blockquote>Gilbert and Gubar argued that the "maddened doubles" in texts by women writers of the nineteenth and twentieth century "function as social surrogates," projecting women writers' anxiety of authorship in a male-dominated literary tradition (Donaldson, 99)</blockquote>
+				</section>
+				<section>
+					<h2>Feminism & Madness</h2>
+					<ol>
+						<li class="fragment"><strong>Contemporary to</strong> the development of the social model of disability</li>
+						<li class="fragment">Emphasis on authorship, makes sense for literary criticism... extension to disability studies...</li>
+						<li class="fragment">Presumed whiteness, cis- and straight-ness, and class position of the "mad" women in question</li>
+					</ol>
+				</section>
+				<section>
+					<h2>Donaldson</h2>
+					<blockquote>
+						A feminist disability studies reading that stresses the connections between madness and physiognomy, between the mind and body, provides us with an alternate way of conceptualizing madness in <i>Jane Eyre</i>... to complicate the current constructions of madness within feminist theory. (102)
+				</section>
+				<section>
+					<h2>Impairment and Disability</h2>
+					<blockquote>
+						A feminist disabilty studies reading... demands closer attention to physical bodies and to the theories of embodiment that structure the novel (110)
+					</blockquote>
+					<p>In particular, physiognomy in the 19th century... though Donaldson argues that it carries over into contemporary studies in neuroscience</p>
+				</section>
+
 			</div>
 		</div>
 
@@ -45,5 +105,7 @@
 				]
 			});
 		</script>
+		<script src="https://unpkg.com/mermaid@8.0.0-beta.1/dist/mermaid.min.js"></script>
+  	<script>mermaid.initialize({startOnLoad:true,theme:'forest'});</script>
 	</body>
 </html>
